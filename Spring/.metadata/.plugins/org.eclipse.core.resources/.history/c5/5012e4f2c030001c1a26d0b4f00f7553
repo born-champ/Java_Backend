@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd"
+	default-init-method="true">
+
+<bean class="com.Employee" id="emp1" scope="singleton"></bean>
+<bean class="com.Employee" id="emp2" scope="prototype"></bean>
+  <bean class="com.Employee" id="emp3">
+    <constructor-arg value="100"></constructor-arg>
+    <constructor-arg value="Raj"></constructor-arg>
+    <constructor-arg value="12000"></constructor-arg>
+</bean>
+<bean class="com.Employee" id="emp4">
+<property name="id" value="101"></property>
+<property name="name" value="Vishnu"></property>
+<property name="salary" value="10100"></property>
+</bean>
+
+<bean class="com.Employee" id="emp5">
+<property name="name" value="Rakesh"></property>
+<property name="id" value="102"></property>
+</bean>
+
+<bean class="com.Address" id="address">
+<property name="city" value="Mirzapur"></property>
+<property name="state" value="UP"></property>
+
+</bean>
+
+<bean class="com.Employee" id="employee"  autowire="byType">
+<property name="id" value="105"></property>
+<property name="name" value="Shiv"></property>
+<property name="salary" value="15100"></property>
+<!--   <property name="add" ref="address"></property>-->
+</bean>
+
+</beans>

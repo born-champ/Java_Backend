@@ -1,0 +1,8 @@
+package com;
+
+public class Manager {
+	public disMgr() {
+		System.out.println("Manager Method");
+	}
+
+}

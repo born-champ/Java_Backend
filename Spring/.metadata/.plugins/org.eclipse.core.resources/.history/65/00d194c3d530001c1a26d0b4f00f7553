@@ -1,0 +1,29 @@
+package com.dao;
+
+import java.sql.Connection;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.bean.Student;
+
+@Repository
+public class StudentDao {
+	
+	@Autowired
+	DataSource ds;
+	
+	public int storeStudentRecord(Student std) {
+		try {
+			Connection con= ds.getConnection();
+			
+			
+		} catch (Exception e) {
+			System.out.println(e);
+			// TODO: handle exception
+		}
+	}
+
+}

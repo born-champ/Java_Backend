@@ -1,0 +1,22 @@
+package com.orm;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.bean.Trainer;
+import com.mysql.cj.xdevapi.SessionFactory;
+
+@Repository
+public class TrainerORM {
+
+	@Autowired
+	SessionFactory sf;
+	
+	public boolean storeTrainer(Trainer trainer ) {
+		try {
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}
